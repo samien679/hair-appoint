@@ -32,4 +32,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::get('/timetable', function () {
+        return Inertia::render('Timetable');
+    })->name('timetable');
 });
