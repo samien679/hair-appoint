@@ -33,7 +33,7 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::get('/timetable', function () {
-        return Inertia::render('Timetable');
-    })->name('timetable');
+    Route::get('/MySchedule', function () {
+        return Inertia::render('MySchedule');
+    })->name('my.schedule');
 });
