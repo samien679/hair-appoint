@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StaffCalendarController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -33,7 +34,5 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::get('/MySchedule', function () {
-        return Inertia::render('MySchedule');
-    })->name('my.schedule');
+    Route::get('myschedule', [StaffCalendarController::class, 'show'])->name('my.schedule');
 });

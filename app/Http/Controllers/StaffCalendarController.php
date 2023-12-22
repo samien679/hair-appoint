@@ -13,15 +13,25 @@ class StaffCalendarController extends Controller
     public function show()
     {
         $user = Auth::id();
-        $now = now();
+        $now = Carbon::now();
         $upcomingWeek = array(
-            "day1" => $now()->format('l jS \\of F Y h:i:s A'),
-            "day2" => 
+            "day1" => Carbon::now()->format('d.m.Y'),
+            "day2" => Carbon::now()->addDay()->format('d.m.Y l'),
+            "day3" => Carbon::now()->addDay(2)->format('d.m.Y'),
+            "day4" => Carbon::now()->addDay(3)->format('d.m.Y'),
+            "day5" => Carbon::now()->addDay(4)->format('d.m.Y'),
+            "day6" => Carbon::now()->addDay(5)->format('d.m.Y'),
+            "day7" => Carbon::now()->addDay(6)->format('d.m.Y'),
 
-    
-    );
+
+
+
+        );
+
         return Inertia::render('MySchedule', [
-            'user' => $user
+            'user' => $user,
+            'date' => $upcomingWeek
+
         ]);
     }
 }
