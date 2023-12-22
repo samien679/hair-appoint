@@ -15,13 +15,13 @@ class StaffCalendarController extends Controller
         $user = Auth::id();
         $now = Carbon::now();
         $upcomingWeek = array(
-            "day1" => Carbon::now()->format('d.m.Y'),
+            "day1" => Carbon::now()->format('d.m.Y l'),
             "day2" => Carbon::now()->addDay()->format('d.m.Y l'),
-            "day3" => Carbon::now()->addDay(2)->format('d.m.Y'),
-            "day4" => Carbon::now()->addDay(3)->format('d.m.Y'),
-            "day5" => Carbon::now()->addDay(4)->format('d.m.Y'),
-            "day6" => Carbon::now()->addDay(5)->format('d.m.Y'),
-            "day7" => Carbon::now()->addDay(6)->format('d.m.Y'),
+            "day3" => Carbon::now()->addDay(2)->format('d.m.Y l'),
+            "day4" => Carbon::now()->addDay(3)->format('d.m.Y l'),
+            "day5" => Carbon::now()->addDay(4)->format('d.m.Y l'),
+            "day6" => Carbon::now()->addDay(5)->format('d.m.Y l'),
+            "day7" => Carbon::now()->addDay(6)->format('d.m.Y l'),
 
 
 
