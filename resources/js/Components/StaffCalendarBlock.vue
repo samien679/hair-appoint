@@ -1,6 +1,6 @@
 <script setup>
 
-//defineProps({ date: String })
+//defineProps({ time: String })
 
 </script>
 <template>
